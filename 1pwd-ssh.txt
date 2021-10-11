@@ -1,7 +1,7 @@
-Title:			Using 1Password to login to an SSH session.
+Title:		Using 1Password to login to an SSH session.
 
 Description:	This is the technique I use to leverage 1Password to login to SSH terminal session, from Linux to Linux, though Windows is also supported (see docs).  No more SSH keys written to disk:
-				https://support.1password.com/command-line-getting-started/
+		https://support.1password.com/command-line-getting-started/
 
 1Password Setup Instructions:
 
@@ -18,9 +18,9 @@ Next we'll create a 1Password entry for logging into a Linux host via SSH:
 
 Step 1:		Add a vault in 1Password called "api", and change to that vault.
 Step 2:		Create an entry for your host as follows:
-				Step A.	Create a new "Server" object.
-				Step B.	Give it a name ([ITEM_NAME]), and set the URL to the DNS name of the server and username to the user id.
-				Step C.	Create a new section called SSH.  Set the 1st field as "host" w/ the hostname, 2nd field as "user" w/ user id, and the 3rd field as "key" ... copy/paste the openssh private key in this field - DO NOT MODIFY.  Save entry.
+			Step A.	Create a new "Server" object.
+			Step B.	Give it a name ([ITEM_NAME]), and set the URL to the DNS name of the server and username to the user id.
+			Step C.	Create a new section called SSH.  Set the 1st field as "host" w/ the hostname, 2nd field as "user" w/ user id, and the 3rd field as "key" ... copy/paste the openssh private key in this field - DO NOT MODIFY.  Save entry.
 
 
 The following script creates the variables for the USER, HOST and loads the SSH key into the SSH-AGENT.  It then logs into the host.  After disconnecting, the key is removed from the agent and the variables unset.
