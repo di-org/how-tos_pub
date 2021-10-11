@@ -1,0 +1,6 @@
+# replace newline with comma-space
+sed ':a;N;$!ba;s/\n/, /g' ~/remote2.txt
+
+#replace comma-space with newline
+sed 's/\, /\n/g'
+
