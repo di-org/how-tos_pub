@@ -23,7 +23,7 @@ Step 2:		Create an entry for your host as follows:
 			Step C.	Create a new section called SSH.  Set the 1st field as "host" w/ the hostname, 2nd field as "user" w/ user id, and the 3rd field as "key" ... copy/paste the openssh private key in this field - DO NOT MODIFY.  Save entry.
 
 
-The following script creates the variables for the USER, HOST and loads the SSH key into the SSH-AGENT.  It then logs into the host.  After disconnecting, the key is removed from the agent and the variables unset.
+The following script creates the variables for the USER, HOST and loads the SSH key into the SSH-AGENT.  It then will login to the host.  After disconnecting, the key is removed from the agent and the variables unset.
 
 Name the following script "1pwd_ssh.sh", and run the script as follows:  ./1pwd_ssh.sh [ITEM_NAME]  (e.g.:  "./1pwd_ssh.sh west")
 
