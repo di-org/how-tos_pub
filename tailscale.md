@@ -19,4 +19,3 @@ sudo yum-config-manager --add-repo https://pkgs.tailscale.com/stable/centos/7/ta
 sudo yum install tailscale<br />
 sudo systemctl enable --now tailscaled<br />
 sudo tailscale up<br />
-gfe
